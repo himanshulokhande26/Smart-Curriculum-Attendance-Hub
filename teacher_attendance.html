@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Attendance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h2>Live Attendance - Class CSE-A</h2>
+            <a href="teacher_dashboard.html" class="logout-btn">Back to Dashboard</a>
+        </header>
+
+        <main>
+            <div class="table-container">
+                <table class="attendance-table">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Enrollment No.</th>
+                            <th>Class ID</th>
+                            <th>Timestamp</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Himanshu Lokhande</td>
+                            <td>0567CS231061</td>
+                            <td>CSE-102</td>
+                            <td>08:15:21 AM</td>
+                            <td><span class="status-tag status-present">Present</span></td>
+                        </tr>
+                        <tr>
+                            <td>Maria Garcia</td>
+                            <td>0567CS231062</td>
+                            <td>CSE-102</td>
+                            <td>08:15:35 AM</td>
+                            <td><span class="status-tag status-present">Present</span></td>
+                        </tr>
+                        <tr>
+                            <td>James Smith</td>
+                            <td>0567CS231063</td>
+                            <td>CSE-102</td>
+                            <td>-</td>
+                            <td><span class="status-tag status-absent">Absent</span></td>
+                        </tr>
+                        <tr>
+                            <td>Priya Sharma</td>
+                            <td>0567CS231064</td>
+                            <td>CSE-102</td>
+                            <td>08:16:02 AM</td>
+                            <td><span class="status-tag status-present">Present</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

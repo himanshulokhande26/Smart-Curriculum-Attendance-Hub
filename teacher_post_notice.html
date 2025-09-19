@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Notice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h2>Post a New Notice</h2>
+            <a href="teacher_dashboard.html" class="logout-btn">Back to Dashboard</a>
+        </header>
+        <div class="form-container" style="padding: 2.5rem; max-width: 700px; margin: auto; text-align: left;">
+            <form id="notice-form">
+                <div class="form-group">
+                    <label for="notice-title">Notice Title</label>
+                    <input type="text" id="notice-title" placeholder="e.g., Upcoming Mid-term Exams" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 8px;">
+                </div>
+                <div class="form-group">
+                    <label for="notice-content">Notice Content</label>
+                    <textarea id="notice-content" placeholder="Enter the full details of the notice here..." required style="width: 100%; min-height: 150px; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 8px;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Post Notice</button>
+            </form>
+        </div>
+    </div>
+    <div id="success-modal" class="modal-overlay">
+        <div class="modal-content">
+            <p style="font-size: 1.2rem; font-weight: 500; color: var(--success-color);">Notice Posted Successfully!</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('notice-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('success-modal').style.display = 'flex';
+            setTimeout(() => { window.location.href = 'teacher_dashboard.html'; }, 2000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Attendance QR Code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h2>Generate Attendance QR Code</h2>
+            <a href="teacher_dashboard.html" class="logout-btn">Back to Dashboard</a>
+        </header>
+
+        <div class="scanner-container">
+            <div id="qrcode" style="display: flex; justify-content: center; margin-bottom: 1.5rem;"></div> 
+            <p>Students, please scan this code to mark your attendance.</p>
+            <p class="scan-status">
+                Status: <span id="status-text">Code expires in <span id="timer">5:00</span>...</span>
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="attendance.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeTeacherView();
+        });
+    </script>
+</body>
+</html>

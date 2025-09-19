@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan QR Code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h2>Scan Attendance QR Code</h2>
+            <a href="student_dashboard.html" class="logout-btn">Back to Dashboard</a>
+        </header>
+
+        <div class="scanner-container">
+            <video id="scanner-video" style="width: 100%; border-radius: 10px;"></video>
+            <p>Position the teacher's QR code within the frame.</p>
+            <p id="scan-result" class="scan-status"></p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+    <script src="attendance.js"></script>
+    <script>
+        // Initialize the student's side of the script
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeStudentScanner();
+        });
+    </script>
+</body>
+</html>
